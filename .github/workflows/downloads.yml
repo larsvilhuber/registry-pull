@@ -36,5 +36,7 @@ jobs:
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: .
-        publish_branch: main
+        publish_branch: releases
         full_commit_message: "Registrations in the AEA RCT Registry (2013-05-15 through ${{ env.PULLDATE }})"
+        tag_name: release-${{ env.PULLDATE }}
+        tag_message: "Registrations in the AEA RCT Registry (2013-05-15 through ${{ env.PULLDATE }})"
